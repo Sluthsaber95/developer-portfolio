@@ -18,9 +18,9 @@ export default ({ data }) => {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link to={node.fields.slug}>
-            <h3 style={{marginBottom: 10}}>
+            <h3 style={{ marginBottom: 10 }}>
               {node.frontmatter.title}{" "}
-              <span style={{color: '#BBB'}}>— {node.frontmatter.date}</span>
+              <span style={{ color: '#BBB' }}>— {node.frontmatter.date}</span>
             </h3>
           </Link>
           <p>{node.excerpt}</p>
@@ -31,7 +31,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query IndexQuery {
+  query DevelopmentProjectQuery {
     allMarkdownRemark {
       totalCount
       edges {
