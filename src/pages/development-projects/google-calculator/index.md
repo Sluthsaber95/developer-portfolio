@@ -4,7 +4,7 @@ data: 02/28/2018
 img: google-calc.img
 github: https://github.com/anthonytranDev/Google_Calculator_App.git 
 ---
-[![Google Calculator Clone](./google-calc-clone.png)](https://www.gatsbyjs.org/packages/gatsby-remark-images/?=gatsby-remark-images)
+[![Google Calculator Clone](./google-calc-clone.png)][1]
 
 ## Development Approach
 Reverse Engineering - a lot of time spent manually tinkering with the actually Google calculator - the one you get from googling 'calculator'. Key aspects such as mathematical precision, infinite values were noted, to mimic the apps behaviours.
@@ -29,3 +29,5 @@ Reverse Engineering - a lot of time spent manually tinkering with the actually G
 <hr>
 
 __Completion Date:__ 28th September 2017E
+
+[1]: https://github.com/anthonytranDev/Google_Calculator_App.git
