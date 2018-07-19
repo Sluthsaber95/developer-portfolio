@@ -30,6 +30,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
     `
     ).then(result => {
+      if (result.errors) {
+        console.error('GraphQL query returned errors')
+        reject(result.errors)
+      }
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
