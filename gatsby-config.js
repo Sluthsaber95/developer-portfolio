@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
