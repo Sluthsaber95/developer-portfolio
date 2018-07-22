@@ -1,5 +1,6 @@
 ---
 title: Pandas and Bananas
+type: "blogs"
 date: "2017-08-21"
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: Google Calculator Clone
+title: Youtube Video Player
 date: "2017-08-21"
 type: development
-img: "./google-calculator/google-calc.png"
+img: "./youtube-video-player/video-rick-morty.png"
 github: https://github.com/anthonytranDev/Google_Calculator_App.git 
 ---
-[![Google Calculator Clone](./google-calc.png)][1]
+[![Rick and Morty](./video-rick-morty.png)][1]
 
 ## Development Approach
-Reverse Engineering - a lot of time spent manually tinkering with the actually Google calculator - the one you get from googling 'calculator'. Key aspects such as mathematical precision, infinite values were noted, to mimic the apps behaviours.
+Reverse Engineering - The main video player build was separated from the 'Interactive Design Side' then combined later on. As it was important to get the functionality of the app right first before moving onto the design side focusing on UX.
 
 ## Development Analysis
 ### Pros
@@ -31,4 +31,4 @@ Reverse Engineering - a lot of time spent manually tinkering with the actually G
 
 __Completion Date:__ 28th September 2017E
 
-[1]: https://github.com/anthonytranDev/Google_Calculator_App.git
+[1]: https://github.com/anthonytranDev/youtube_video_player_clone.git
