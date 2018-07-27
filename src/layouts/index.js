@@ -1,48 +1,41 @@
-import React from "react";
-import { css } from "emotion";
-import Link from "gatsby-link";
+import React from "react"
+import { css } from "emotion"
+import Link from "gatsby-link"
 
-const navOptionsLink = css`
-  display: inline-block;
-  margin-right: 1rem;
-`
-const navOption = css`
-  margin-bottom: 10px;
-  displa: inline-block;
-  color: black;
-`
-const navBar = css`
+import NavBar from "./NavBar"
+const containerStyle = css`
   margin: 0 auto;
-  max-width: 700px;
-  padding: 10px;
+  max-width: 1000px;
+  padding: 50px 20px;
+`
+const displayStyle = css`
+  @media(min-width: 1824px){
+    margin-top: 70px;
+    min-height: 800px;
+  }
+  @media(max-width: 1823px){
+    margin-top: 70px;
+    min-height: 800px;
+  }
+  @media(max-width: 768px){
+    margin-top: 40px;
+  }
+  @media(max-width: 568px){
+    margin-top: 20px;
+  }
 `
 
-const ListLink = props =>
-  <li className={navOptionsLink}>
-    <Link to={props.to}>
-      <div className={navOption}>
-        {props.children}
-      </div>
-    </Link>
-  </li>
+const DisplayPage = ({ children }) =>
+  <section className={displayStyle}>
+    {children()}
+  </section>
 
 export default ({ children, data }) =>
-
-  <div className={navBar}>
-    <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/about">
-            About
-        </ListLink>
-        <ListLink to="/contact/">
-            Contact
-        </ListLink>
-      </ul>
-    </header>
-    {children()}
+  <div>
+    <div className={containerStyle}>
+      <NavBar data={data} />
+      <DisplayPage children={children} />
+    </div>
   </div>
 
 export const query = graphql`
