@@ -1,6 +1,5 @@
 import React from "react"
 import { css } from "react-emotion"
-import Download from "@axetroy/react-download"
 import Link from "gatsby-link"
 import shortid from "shortid"
 
