@@ -244,7 +244,7 @@ const Footer = () => {
   return (
   <article style={{ marginBottom: '10vw'}}>
     <hr />
-      <a style={{ letterSpacing: '0.03em'}} href="/static/Anthony%20Tran%20CV.bcc48b0c.pdf">
+      <a style={{ letterSpacing: '0.03em' }} href="https://drive.google.com/file/d/1aA3bJqrBpSu_pnQA0T__bOhZEEaxZorl/view?usp=sharing">
         Anthony Tran Curriculum Vitae PDF
       </a>
   </article>
