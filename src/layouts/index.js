@@ -3,6 +3,8 @@ import { css } from "emotion"
 import Link from "gatsby-link"
 
 import NavBar from "./NavBar"
+import Footer from "./Footer"
+
 const containerStyle = css`
   margin: 0 auto;
   max-width: 1000px;
@@ -36,6 +38,7 @@ export default ({ children, data }) =>
       <NavBar data={data} />
       <DisplayPage children={children} />
     </div>
+    <Footer />
   </div>
 
 export const query = graphql`
