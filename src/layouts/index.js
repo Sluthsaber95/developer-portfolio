@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "emotion"
 import Link from "gatsby-link"
+require(`katex/dist/katex.min.css`)
 
 import NavBar from "./NavBar"
 import Footer from "./Footer"
