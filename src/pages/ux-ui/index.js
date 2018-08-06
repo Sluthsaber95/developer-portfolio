@@ -49,7 +49,7 @@ export default ({ data }) => {
     </article>
   return (
     <section>
-      <h1 className={headerStyle}> Developer Projects </h1>
+      <h1 className={headerStyle}> UX/UI </h1>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
       <Portfolio />
     </section>
