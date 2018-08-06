@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "react-emotion"
-import Link from "gatsby-link"
+import GatsbyLink from "gatsby-link"
 
 import IconPhone from "./icon-phone.svg"
 import IconEmail from "./icon-email.svg"
@@ -40,13 +40,29 @@ const collectionStyle = css`
   }
 `
 
+const Link = ({ children, to, ...other }) => {
+  const internal = /^\/(?!\/)/.test(to);
+  if (internal) {
+    return (
+      <GatsbyLink to={to} {...other}>
+        {children}
+      </GatsbyLink>
+    );
+  }
+  return (
+    <a href={to} {...other}>
+      {children}
+    </a>
+  );
+};
+
 const Line = () => 
   <div style={{ width: '100vw', height: 2, background: 'rgba(0, 0, 0, 0.1)'}}></div>
 
-const Anchor = ({ link, children }) => 
-  <a style={{ color: 'rgba(0, 0, 0, 0.5)' }} href={ link || ""}>
+const Anchor = ({ to, children }) => 
+  <Link style={{ color: 'rgba(0, 0, 0, 0.5)' }} to={to}>
     { children }
-  </a>
+  </Link>
 
 const List = ({ label, content, children }) => {
   const ListFormat =  label
@@ -65,6 +81,7 @@ const List = ({ label, content, children }) => {
     </li>
   )
 }
+
 
 const ListLink = ({ to, children }) =>
   <List>
@@ -119,8 +136,8 @@ const Contact = () =>
       />
     </ListIcon>
     <ListIcon icon={IconTwitter}>
-      <Anchor
-        link="https://twitter.com/AnthonytranDev"
+      <Anchor 
+        to="https://twitter.com/AnthonytranDev"
         children="@anthonytrandev"
       />
     </ ListIcon>
@@ -129,10 +146,7 @@ const Contact = () =>
 const DLC = () =>
   <Collection title="DLC">
     <List>
-      <Anchor>Curriculum Vitae</Anchor>
-    </List>
-    <List>
-      <Anchor>Education Grades</Anchor>
+      <Anchor to="https://drive.google.com/file/d/1aA3bJqrBpSu_pnQA0T__bOhZEEaxZorl/view?usp=sharing">Curriculum Vitae</Anchor>
     </List>
   </Collection>
 
