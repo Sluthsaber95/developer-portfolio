@@ -27,8 +27,8 @@ export default ({ data }) => {
     require('./tic-tac-toe/tic-tac-toe.png'),
     require('./markdown-previewer/markdown.png'),
     require('./pomodoro-clock/pomodoro-clock.png'),
-    require('./youtube-video-player/video-rick-morty.png'),
     require('./google-calculator/google-calc.png'),
+    require('./youtube-video-player/video-rick-morty.png'),
   ];
   const Project = ({ node, index }) => 
     <div key={node.id} className={projectStyle}>
